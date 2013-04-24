@@ -8,5 +8,5 @@ package de.unistuttgart.dsa2013.ws1;
  *
  */
 public class SpeedList<T> {
-	//test
+	//TODO
 }
