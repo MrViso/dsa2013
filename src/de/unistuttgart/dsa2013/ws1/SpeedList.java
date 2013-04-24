@@ -3,11 +3,13 @@
  */
 package de.unistuttgart.dsa2013.ws1;
 
+import java.util.Iterator;
+
 /**
  * @author Viso
  *
  */
-public class SpeedList<T> implements A1aCollection<T> {
+public class SpeedList<T> implements A1aCollection<T>, A1bCollection<T>, A1cCollection<T>{
 
 	SpeedNode<T> firstNode;
 	
@@ -30,6 +32,24 @@ public class SpeedList<T> implements A1aCollection<T> {
 		
 		return i;
 		
+	}
+
+	@Override
+	public Iterator<T> iterator() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public T getElementAt(int index) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Iterator<T> skippingIterator(int n) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
 
