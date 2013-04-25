@@ -3,6 +3,8 @@
  */
 package de.unistuttgart.dsa2013.ws1;
 
+import com.sun.corba.se.spi.legacy.connection.GetEndPointInfoAgainException;
+
 /**
  * @author Viso
  * 
@@ -22,6 +24,9 @@ public class Main {
 
 		int anzahl = liste.size();
 		System.out.println(anzahl);
+		
+		System.out.println(liste.getElementAt(9));
+		
 
 	}
 

@@ -4,7 +4,15 @@
 package de.unistuttgart.dsa2013.ws1;
 
 /**
- * @author Maximilian Visotschnig,
+ * Klasse von generischen Knoten Node<T>, welche aus jeweils einem generischen
+ * Wert value, einem Zeiger auf den nachesten Knoten und einem Zeiger auf den
+ * achtnaechsten Knoten bestehen.
+ * 
+ * @author Maximilian Visotschnig, Frank Merkle, Alessandro Tridico
+ * @history 2013-04-24 MV 1.0 Erste Version
+ * @history 2013-04-25 MV 1.1 Verbesserung der null Pruefung
+ * @history 2014-04-25 MV 1.2 Erweiterung der Kommentare
+ * @version 2013-04-25 MV 1.2
  * 
  */
 public class Node<T> {
