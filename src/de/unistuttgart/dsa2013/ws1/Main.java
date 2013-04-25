@@ -5,6 +5,8 @@ package de.unistuttgart.dsa2013.ws1;
 
 import com.sun.corba.se.spi.legacy.connection.GetEndPointInfoAgainException;
 
+import de.unistuttgart.dsa2013.ws1.SpeedList.Iterator;
+
 /**
  * @author Viso
  * 
@@ -26,6 +28,8 @@ public class Main {
 		System.out.println(anzahl);
 		
 		System.out.println(liste.getElementAt(9));
+		
+		liste.iter = liste.skippingIterator(5);
 		
 
 	}

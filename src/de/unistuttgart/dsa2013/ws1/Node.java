@@ -9,9 +9,10 @@ package de.unistuttgart.dsa2013.ws1;
  * achtnaechsten Knoten bestehen.
  * 
  * @author Maximilian Visotschnig, Frank Merkle, Alessandro Tridico
- * @history 2013-04-24 MV 1.0 Erste Version
- * @history 2013-04-25 MV 1.1 Verbesserung der null Pruefung
- * @history 2014-04-25 MV 1.2 Erweiterung der Kommentare
+ * @history 2013-04-24 MV 1.0 Klasse integrieren
+ * @history 2013-04.25 MV 1.1 Konstruktor erstellen
+ * @history 2013-04.25 MV 1.2 achtNext privat setzen und nur noch mit Getter und
+ *          Setter aufrufbar machen
  * @version 2013-04-25 MV 1.2
  * 
  */
@@ -37,7 +38,7 @@ public class Node<T> {
 		this.next = nextNode;
 
 		/*
-		 * Pruefung und setzung der achtnaechsten Stelle des Knotens.
+		 * Pruefung und Setzung der achtnaechsten Stelle des Knotens.
 		 */
 		setAchtnext(nextNode);
 
@@ -50,7 +51,7 @@ public class Node<T> {
 	 * @return den Zeiger achtNext zur achtnaechsten Stelle, wenn verfuegbar,
 	 *         sonst null
 	 */
-	public Node<T> getAchtnext() {
+	public Node<T> getAchtNext() {
 		return achtNext;
 	}
 
