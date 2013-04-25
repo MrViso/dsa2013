@@ -13,13 +13,17 @@ public class SpeedNode<T> {
 	public SpeedNode<T> achtnext = null;
 	
 	/**
-	 *  Constructor fuer die SpeedList.
+	 *  Constructor fuer die einzelnen Knoten.
 	 *
 	 */
 	public SpeedNode(T value, SpeedNode<T> nextNode) {
 		this.value = value;
 		this.next = nextNode;
 		
+		
+		/*
+		 * Pruefung und setzung der achtnaechsten Stelle des Knotens.
+		 */
 		if (nextNode == null)
 			this.achtnext = null;
 		else {

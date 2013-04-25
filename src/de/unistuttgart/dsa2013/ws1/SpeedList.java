@@ -16,11 +16,17 @@ public class SpeedList<T> implements A1aCollection<T>, A1bCollection<T>, A1cColl
 
 	SpeedNode<T> firstNode;
 	
+	/**
+	 * Erstellung eines Knotens an der ersten Stelle.
+	 */
 	public void prepend (T item) {
 		SpeedNode<T> newFirst = new SpeedNode<T> (item, firstNode);
 		firstNode = newFirst;
 	}
 	
+	/**
+	 * Pruefung der Listenlaenge.
+	 */
 	public int size() {
 		int i = 0;
 		SpeedNode<T> zeiger = firstNode;
