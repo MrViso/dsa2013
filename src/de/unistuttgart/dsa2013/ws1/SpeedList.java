@@ -7,23 +7,22 @@ import java.util.Iterator;
 
 /**
  * @author Viso
- *
+ * 
  */
 
-
-public class SpeedList<T> implements A1aCollection<T>, A1bCollection<T>, A1cCollection<T>{
-
+public class SpeedList<T> implements A1aCollection<T>, A1bCollection<T>,
+		A1cCollection<T> {
 
 	SpeedNode<T> firstNode;
-	
+
 	/**
 	 * Erstellung eines Knotens an der ersten Stelle.
 	 */
-	public void prepend (T item) {
-		SpeedNode<T> newFirst = new SpeedNode<T> (item, firstNode);
+	public void prepend(T item) {
+		SpeedNode<T> newFirst = new SpeedNode<T>(item, firstNode);
 		firstNode = newFirst;
 	}
-	
+
 	/**
 	 * Pruefung der Listenlaenge.
 	 */
@@ -36,22 +35,22 @@ public class SpeedList<T> implements A1aCollection<T>, A1bCollection<T>, A1cColl
 			i++;
 			return i;
 		}
-		
+
 		if (zeiger.next == null)
 			return i;
-		
+
 		while (zeiger.achtnext != null) {
-			i+=8;
+			i += 8;
 			zeiger = zeiger.achtnext;
 		}
-		
+
 		do {
 			i++;
-			zeiger = zeiger.next;		
+			zeiger = zeiger.next;
 
 		} while (zeiger.next != null);
 		return i;
-		
+
 	}
 
 	@Override
@@ -72,5 +71,3 @@ public class SpeedList<T> implements A1aCollection<T>, A1bCollection<T>, A1cColl
 		return null;
 	}
 }
-
-
