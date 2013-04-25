@@ -29,7 +29,7 @@ public class Main {
 		
 		System.out.println(liste.getElementAt(9));
 		
-		liste.iter = liste.skippingIterator(5);
+		//liste.iter = liste.skippingIterator(5);
 		
 
 	}

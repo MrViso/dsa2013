@@ -17,7 +17,8 @@ import java.util.NoSuchElementException;
  * @history 2013-04-25 FM 1.3 Entwicklungsanfang des Iterators
  * @history 2013-04-25 MV 1.4 Implementierung der Methode getElementAt()
  * @history 2013-04-25 MV 1.5 Implementierung des Iterators
- * @version 2013-04-25 MV 1.5
+ * @history 2013-04-25 MV 1.6 Programmsturktur ueberarbeitet
+ * @version 2013-04-25 MV 1.6
  * 
  */
 
@@ -67,35 +68,6 @@ public class SpeedList<T> implements A1aCollection<T>, A1bCollection<T>,
 		} while (zeiger.next != null);
 		return i;
 
-	}
-
-	/**
-	 * Sucht das Element an der Stelle index und gibt dessen Wert aus. Nach
-	 * Moeglichkeit werden Spruenge um acht Stellen genutzt.
-	 * 
-	 * @param index
-	 *            Gibt die gesuchte Stelle der Liste an, deren Wert
-	 *            zurueckgegeben werden soll
-	 */
-	public T getElementAt(int index) throws IndexOutOfBoundsException {
-		Node<T> zeiger = firstNode;
-		if (size() >= index) {
-			while (index > 0) {
-				if (index > 1) {
-					if (index > 8) {
-						zeiger = zeiger.getAchtNext();
-						index -= 8;
-					} else {
-						zeiger = zeiger.next;
-						index--;
-					}
-				} else {
-					return zeiger.value;
-				}
-
-			}
-		}
-		throw new IndexOutOfBoundsException("Index zu groﬂ fuer Listenlaenge");
 	}
 
 	/**
@@ -179,12 +151,41 @@ public class SpeedList<T> implements A1aCollection<T>, A1bCollection<T>,
 
 	}
 
-	Iterator<T> iter;
-	
+	//Iterator<T> iter;
+
 	@Override
 	public java.util.Iterator<T> iterator() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	/**
+	 * Sucht das Element an der Stelle index und gibt dessen Wert aus. Nach
+	 * Moeglichkeit werden Spruenge um acht Stellen genutzt.
+	 * 
+	 * @param index
+	 *            Gibt die gesuchte Stelle der Liste an, deren Wert
+	 *            zurueckgegeben werden soll
+	 */
+	public T getElementAt(int index) throws IndexOutOfBoundsException {
+		Node<T> zeiger = firstNode;
+		if (size() >= index) {
+			while (index > 0) {
+				if (index > 1) {
+					if (index > 8) {
+						zeiger = zeiger.getAchtNext();
+						index -= 8;
+					} else {
+						zeiger = zeiger.next;
+						index--;
+					}
+				} else {
+					return zeiger.value;
+				}
+
+			}
+		}
+		throw new IndexOutOfBoundsException("Index zu groﬂ fuer Listenlaenge");
 	}
 
 }
