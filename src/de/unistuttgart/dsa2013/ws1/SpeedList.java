@@ -9,7 +9,10 @@ import java.util.Iterator;
  * @author Viso
  *
  */
+
+
 public class SpeedList<T> implements A1aCollection<T>, A1bCollection<T>, A1cCollection<T>{
+
 
 	SpeedNode<T> firstNode;
 	
@@ -21,15 +24,26 @@ public class SpeedList<T> implements A1aCollection<T>, A1bCollection<T>, A1cColl
 	public int size() {
 		int i = 0;
 		SpeedNode<T> zeiger = firstNode;
-		
-		if (zeiger == null)
+		if (zeiger != null) {
+			i++;
+		} else {
+			i++;
 			return i;
+		}
+		
+		if (zeiger.next == null)
+			return i;
+		
+		while (zeiger.achtnext != null) {
+			i+=8;
+			zeiger = zeiger.achtnext;
+		}
 		
 		do {
 			i++;
-			zeiger = zeiger.next;			
+			zeiger = zeiger.next;		
+
 		} while (zeiger.next != null);
-		
 		return i;
 		
 	}
