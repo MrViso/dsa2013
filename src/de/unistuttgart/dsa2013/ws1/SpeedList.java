@@ -13,13 +13,13 @@ import java.util.Iterator;
 public class SpeedList<T> implements A1aCollection<T>, A1bCollection<T>,
 		A1cCollection<T> {
 
-	SpeedNode<T> firstNode;
+	Node<T> firstNode;
 
 	/**
 	 * Erstellung eines Knotens an der ersten Stelle.
 	 */
 	public void prepend(T item) {
-		SpeedNode<T> newFirst = new SpeedNode<T>(item, firstNode);
+		Node<T> newFirst = new Node<T>(item, firstNode);
 		firstNode = newFirst;
 	}
 
@@ -28,7 +28,7 @@ public class SpeedList<T> implements A1aCollection<T>, A1bCollection<T>,
 	 */
 	public int size() {
 		int i = 0;
-		SpeedNode<T> zeiger = firstNode;
+		Node<T> zeiger = firstNode;
 		if (zeiger != null) {
 			i++;
 		} else {
@@ -39,9 +39,9 @@ public class SpeedList<T> implements A1aCollection<T>, A1bCollection<T>,
 		if (zeiger.next == null)
 			return i;
 
-		while (zeiger.achtnext != null) {
+		while (zeiger.getAchtnext() != null) {
 			i += 8;
-			zeiger = zeiger.achtnext;
+			zeiger = zeiger.getAchtnext();
 		}
 
 		do {
