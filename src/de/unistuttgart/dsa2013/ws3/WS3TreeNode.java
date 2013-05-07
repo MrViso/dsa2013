@@ -25,7 +25,7 @@ public class WS3TreeNode<E> {
 	public WS3TreeNode(int n) throws IllegalArgumentException {
 		if (n < 1) {
 			throw new IllegalArgumentException(
-					"Knoten muss wenigstens ein Kind haben können.");
+					"Node must have one or more children. n < 1");
 		}
 
 		children = (WS3TreeNode<E>[]) new WS3TreeNode[n];
@@ -184,7 +184,7 @@ public class WS3TreeNode<E> {
 	public boolean isFull() {
 		boolean value = true;
 		if (getChildCount() == children.length) {
-			for (int i = 1; i <= children.length; i++)
+			for (int i = 0; i <= children.length-1; i++)
 				getChild(i).isFull();
 		} else if (getChildCount() == 0) {
 			value = true;
