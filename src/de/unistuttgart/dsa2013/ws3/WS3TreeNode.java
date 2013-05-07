@@ -183,14 +183,12 @@ public class WS3TreeNode<E> {
 	 */
 	public boolean isFull() {
 		boolean value = true;
-		if (getChildCount() == n){
-			for (int i = 1; i <= n; i++)
+		if (getChildCount() == children.length) {
+			for (int i = 1; i <= children.length; i++)
 				getChild(i).isFull();
-		}
-		else if (getChildCount() == 0){
+		} else if (getChildCount() == 0) {
 			value = true;
-		}
-		else {		
+		} else {
 			value = false;
 		}
 		return value;
