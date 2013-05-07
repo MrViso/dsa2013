@@ -1,8 +1,10 @@
 package de.unistuttgart.dsa2013.ws3;
 
+import com.sun.xml.internal.bind.v2.TODO;
+
 /**
- * The class WS3TreeNode implements a class type which allows zu create
- * and define nodes for a tree. Therefore you can find the class itself and some
+ * The class WS3TreeNode implements a class type which allows zu create and
+ * define nodes for a tree. Therefore you can find the class itself and some
  * methodes, which are used to build and define the connections to other nodes
  * of this type.
  * 
@@ -22,7 +24,8 @@ public class WS3TreeNode<E> {
 	@SuppressWarnings("unchecked")
 	public WS3TreeNode(int n) throws IllegalArgumentException {
 		if (n < 1) {
-			throw new IllegalArgumentException("Knoten muss wenigstens ein Kind haben können.");
+			throw new IllegalArgumentException(
+					"Knoten muss wenigstens ein Kind haben können.");
 		}
 
 		children = (WS3TreeNode<E>[]) new WS3TreeNode[n];
@@ -171,5 +174,25 @@ public class WS3TreeNode<E> {
 	 */
 	public void setValue(E value) {
 		this.value = value;
+	}
+
+	/**
+	 * Checks if the tree is full oder not.
+	 * 
+	 * @return value if tree is full
+	 */
+	public boolean isFull() {
+		boolean value = true;
+		if (getChildCount() == n){
+			for (int i = 1; i <= n; i++)
+				getChild(i).isFull();
+		}
+		else if (getChildCount() == 0){
+			value = true;
+		}
+		else {		
+			value = false;
+		}
+		return value;
 	}
 }
