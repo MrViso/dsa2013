@@ -18,7 +18,9 @@ public class Main {
 		baum.addChild(10);
 		baum.addChild(15);
 		baum.addChild(20);
-		//baum.getChild(1).addChild(25);
+		baum.getChild(1).addChild(25);
+		baum.getChild(1).addChild(25);
+		baum.getChild(1).addChild(25);
 		System.out.println(baum.getChild(2).getValue());
 		System.out.println(baum.isFull());
 	}

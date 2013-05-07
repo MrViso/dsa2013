@@ -177,15 +177,23 @@ public class WS3TreeNode<E> {
 	}
 
 	/**
-	 * Checks if the tree is full oder not.
+	 * Checks the tree if it is full or not.
+	 * 
+	 * @author Maximilian Visotschnig, Frank Merkle, Alessandro Tridico
+	 * @history 2013-05-07 MV 1.0 implementation of isFull
+	 * @history 2013-05-07 MV 1.1 check whole tree
+	 * @version 2013-05-07 MV 1.1
 	 * 
 	 * @return value if tree is full
 	 */
 	public boolean isFull() {
 		boolean value = true;
 		if (getChildCount() == children.length) {
-			for (int i = 0; i <= children.length-1; i++)
-				getChild(i).isFull();
+			for (int i = 0; i <= children.length - 1; i++) {
+				value = getChild(i).isFull();
+				if (value == false)
+					return value;
+			}
 		} else if (getChildCount() == 0) {
 			value = true;
 		} else {
