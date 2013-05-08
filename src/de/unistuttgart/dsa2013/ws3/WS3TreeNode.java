@@ -182,21 +182,39 @@ public class WS3TreeNode<E> {
 	 * @author Maximilian Visotschnig, Frank Merkle, Alessandro Tridico
 	 * @history 2013-05-07 MV 1.0 implementation of isFull
 	 * @history 2013-05-07 MV 1.1 check whole tree
-	 * @version 2013-05-07 MV 1.1
+	 * @history 2013-05-08 MV 1.2 checks every branch in order not to return
+	 *          true, if there was only one branch full and the other ones empty
+	 * @version 2013-05-08 MV 1.2
 	 * 
 	 * @return value if tree is full
 	 */
 	public boolean isFull() {
 		boolean value = true;
+		int z = 0;
+		// Checks if there are enough children
 		if (getChildCount() == children.length) {
-			for (int i = 0; i <= children.length - 1; i++) {
-				value = getChild(i).isFull();
-				if (value == false)
-					return value;
-			}
-		} else if (getChildCount() == 0) {
+			// Check if every Child is full or empty
+			for (int i = 0; i <= children.length - 1; i++)
+				if (getChild(i).getChildCount() != 0)
+					z++;
+			// Only getChild(i).isFull(); if every child is full or they are
+			// empty
+			if (z == 0 || z == children.length) {
+				for (int i = 0; i <= children.length - 1; i++) {
+					value = getChild(i).isFull();
+					// Instant return of value false from the isFull() recursion
+					if (value == false)
+						return value;
+				}
+			} else
+				return false;
+		}
+		// Checks if there are zero leaves
+		else if (getChildCount() == 0) {
 			value = true;
-		} else {
+		}
+		// Every other case
+		else {
 			value = false;
 		}
 		return value;

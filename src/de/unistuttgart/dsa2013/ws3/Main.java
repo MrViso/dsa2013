@@ -21,6 +21,42 @@ public class Main {
 		baum.getChild(1).addChild(25);
 		baum.getChild(1).addChild(25);
 		baum.getChild(1).addChild(25);
+		baum.getChild(2).addChild(25);
+		baum.getChild(2).addChild(25);
+		baum.getChild(2).addChild(25);
+		baum.getChild(0).addChild(25);
+		baum.getChild(0).addChild(25);
+		baum.getChild(0).addChild(25);
+		baum.getChild(0).getChild(0).addChild(100);
+		baum.getChild(0).getChild(0).addChild(100);
+		baum.getChild(0).getChild(0).addChild(100);
+		baum.getChild(1).getChild(0).addChild(100);
+		baum.getChild(1).getChild(0).addChild(100);
+		baum.getChild(1).getChild(0).addChild(100);
+		baum.getChild(2).getChild(0).addChild(100);
+		baum.getChild(2).getChild(0).addChild(100);
+		baum.getChild(2).getChild(0).addChild(100);
+
+		baum.getChild(0).getChild(1).addChild(100);
+		baum.getChild(0).getChild(1).addChild(100);
+		baum.getChild(0).getChild(1).addChild(100);
+		baum.getChild(1).getChild(1).addChild(100);
+		baum.getChild(1).getChild(1).addChild(100);
+		baum.getChild(1).getChild(1).addChild(100);
+		baum.getChild(2).getChild(1).addChild(100);
+		baum.getChild(2).getChild(1).addChild(100);
+		baum.getChild(2).getChild(1).addChild(100);
+		
+		baum.getChild(0).getChild(2).addChild(100);
+		baum.getChild(0).getChild(2).addChild(100);
+		baum.getChild(0).getChild(2).addChild(100);
+		baum.getChild(1).getChild(2).addChild(100);
+		baum.getChild(1).getChild(2).addChild(100);
+		baum.getChild(1).getChild(2).addChild(100);
+		baum.getChild(2).getChild(2).addChild(100);
+		baum.getChild(2).getChild(2).addChild(100);
+		baum.getChild(2).getChild(2).addChild(100);
+		
 		System.out.println(baum.getChild(2).getValue());
 		System.out.println(baum.isFull());
 	}
