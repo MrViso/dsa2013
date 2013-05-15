@@ -21,6 +21,7 @@ public class MyTreeInfoProvider<T> implements TreeInfoProvider<T> {
 	 */
 	@Override
 	public int getHSpacing() {
+		//TODO
 		return 250;
 	}
 
@@ -31,7 +32,8 @@ public class MyTreeInfoProvider<T> implements TreeInfoProvider<T> {
 	 */
 	@Override
 	public int getVSpacing() {
-		return 50;
+		//TODO
+		return 75;
 	}
 
 	/**
@@ -47,6 +49,7 @@ public class MyTreeInfoProvider<T> implements TreeInfoProvider<T> {
 	@Override
 	public void computeSizes(TreeSizeStorage<T> sizeStorage,
 			GenericTreeNode<T> root) {
+		//TODO
 	}
 
 }
