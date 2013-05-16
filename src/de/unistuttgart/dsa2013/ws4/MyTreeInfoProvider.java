@@ -51,11 +51,14 @@ public class MyTreeInfoProvider<T> implements TreeInfoProvider<T> {
 	@Override
 	public void computeSizes(TreeSizeStorage<T> sizeStorage,
 			GenericTreeNode<T> root) {
-		Dimension size = new Dimension();
-		size.height = 50;
-		size.width = 50;
-		sizeStorage.setNodeSize(root, size);
-		sizeStorage.setSubtreeSize(root, size);
+		Dimension sizeNode = new Dimension();
+		Dimension sizeTree = new Dimension();
+		sizeNode.height = 50;
+		sizeNode.width = 50;
+		sizeTree.height = 50;
+		sizeTree.width = 250;
+		sizeStorage.setNodeSize(root, sizeNode);
+		sizeStorage.setSubtreeSize(root, sizeTree);
 	}
 
 }

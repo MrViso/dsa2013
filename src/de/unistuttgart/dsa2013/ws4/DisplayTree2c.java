@@ -22,7 +22,7 @@ public class DisplayTree2c {
 	 */
 	public static void main(String[] args) {
 		GenericTreeNode<Integer> tree = MyTreeFactory.createTree();
-		MyTreeInfoProvider<Integer> infoProvider = new MyTreeInfoProvider<Integer>();
+		TreeInfoProvider<Integer> infoProvider = new MyTreeInfoProvider<Integer>();
 		TreeDisplay.showTree(tree, infoProvider);
 
 	}
