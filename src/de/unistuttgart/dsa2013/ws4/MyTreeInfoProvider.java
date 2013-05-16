@@ -25,7 +25,7 @@ public class MyTreeInfoProvider<T> implements TreeInfoProvider<T> {
 	@Override
 	public int getHSpacing() {
 		//TODO
-		return 70;
+		return 130;
 	}
 
 	/**
@@ -61,11 +61,15 @@ public class MyTreeInfoProvider<T> implements TreeInfoProvider<T> {
 			throw new IllegalArgumentException("Wurzel ist null");
 
 		Dimension sizeNode = new Dimension();
+	
 		Dimension sizeTree = new Dimension();
 		sizeNode.height = 20;
 		sizeNode.width = 30;
 		sizeTree.height = 20;
 		sizeTree.width = -30;
+		
+		
+
 		sizeStorage.setNodeSize(root, sizeNode);
 		
 		if(rec_overwrite == 0)
@@ -77,15 +81,24 @@ public class MyTreeInfoProvider<T> implements TreeInfoProvider<T> {
 
 			if(root.getChildAt(i).getChildCount() > 0)
 			{
+				
 				int i2 = 0;
 				while(i2 < root.getChildAt(i).getChildCount())
 				{
-					sizeStorage.setSubtreeSize(root.getChildAt(i).getChildAt(i2), sizeTree);
+					Dimension sizeTree_temp = new Dimension();
+					sizeTree_temp.height = sizeTree.height;
+					sizeTree_temp.width = sizeTree.width;					
+					sizeTree_temp.width = sizeTree.width * root.getChildAt(i).getChildCount();
+
+					
+					sizeStorage.setSubtreeSize(root.getChildAt(i).getChildAt(i2), sizeTree_temp);
+
 					i2++;
 				}
 				
-			}
 			
+			}
+
 		}
 
 	}

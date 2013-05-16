@@ -23,9 +23,9 @@ public class DisplayTree2c {
 	 */
 	public static void main(String[] args)  {
 		try {
-		GenericTreeNode<Integer> tree = MyTreeFactory.createTree();
-		TreeInfoProvider<Integer> infoProvider = new MyTreeInfoProvider<Integer>();
-		TreeDisplay.showTree(tree, infoProvider);
+			GenericTreeNode<Integer> tree = MyTreeFactory.createTree();
+			TreeInfoProvider<Integer> infoProvider = new MyTreeInfoProvider<Integer>();
+			TreeDisplay.showTree(tree, infoProvider);
 		}
 		catch (IllegalArgumentException ex){
 			System.exit(1);
