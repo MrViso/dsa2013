@@ -34,7 +34,7 @@ public class MyTreeSizeStorage<T> implements TreeSizeStorage<T> {
 		// TODO
 		if (root == null)
 			throw new IllegalArgumentException("Wurzel ist null");
-		return null;
+		return subtreeSize;
 	}
 
 	/**
@@ -70,7 +70,7 @@ public class MyTreeSizeStorage<T> implements TreeSizeStorage<T> {
 		if (node == null)
 			throw new IllegalArgumentException("Knoten ist null");
 		// TODO
-		return null;
+		return nodeSize;
 	}
 
 	/**
