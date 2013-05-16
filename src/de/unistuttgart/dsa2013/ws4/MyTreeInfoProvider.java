@@ -24,7 +24,7 @@ public class MyTreeInfoProvider<T> implements TreeInfoProvider<T> {
 	@Override
 	public int getHSpacing() {
 		//TODO
-		return 250;
+		return 50;
 	}
 
 	/**
@@ -35,7 +35,7 @@ public class MyTreeInfoProvider<T> implements TreeInfoProvider<T> {
 	@Override
 	public int getVSpacing() {
 		//TODO
-		return 75;
+		return 25;
 	}
 
 	/**
@@ -53,8 +53,8 @@ public class MyTreeInfoProvider<T> implements TreeInfoProvider<T> {
 			GenericTreeNode<T> root) {
 		Dimension sizeNode = new Dimension();
 		Dimension sizeTree = new Dimension();
-		sizeNode.height = 50;
-		sizeNode.width = 50;
+		sizeNode.height = 20;
+		sizeNode.width = 30;
 		sizeTree.height = 50;
 		sizeTree.width = 250;
 		sizeStorage.setNodeSize(root, sizeNode);
