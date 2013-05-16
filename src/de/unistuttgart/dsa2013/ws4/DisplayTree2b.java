@@ -9,8 +9,8 @@ package de.unistuttgart.dsa2013.ws4;
  * @author Maximilian Visotschnig
  * @author Frank Merkle
  * @author Alessandro Tridico
- * @history 2013-05-15 MV 1.0 
- * @version 2013-05-15 MV 1.0 Erste Version
+ * @version 2013-05-15 MV 1.0 
+ * @history 2013-05-15 MV 1.0 Erste Version
  * 
  */
 public class DisplayTree2b {
