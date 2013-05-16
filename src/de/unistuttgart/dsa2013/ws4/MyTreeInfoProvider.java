@@ -72,10 +72,11 @@ public class MyTreeInfoProvider<T> implements TreeInfoProvider<T> {
 
 		sizeStorage.setNodeSize(root, sizeNode);
 		
-		if(rec_overwrite == 0){
+		if(rec_overwrite == 0)
+		{
 			sizeTree.width = 100;
 			sizeStorage.setSubtreeSize(root, sizeTree);
-			}
+		}
 			
 		rec_overwrite = 1;
 		
@@ -88,7 +89,7 @@ public class MyTreeInfoProvider<T> implements TreeInfoProvider<T> {
 				
 				int i2 = 0;
 				while(i2 < root.getChildAt(i).getChildCount())
-				{	//sizeTree.width = -30;
+				{	
 					Dimension sizeTree_temp = new Dimension();
 					sizeTree_temp.height = sizeTree.height;
 					sizeTree_temp.width = -20;					
