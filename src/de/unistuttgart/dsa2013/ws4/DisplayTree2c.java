@@ -9,8 +9,9 @@ package de.unistuttgart.dsa2013.ws4;
  * @author Maximilian Visotschnig
  * @author Frank Merkle
  * @author Alessandro Tridico
- * @history 2013-05-15 MV 1.0 
- * @version 2013-05-15 MV 1.0 Erste Version
+ * @version 2013-05-16 MV 1.1 
+ * @history 2013-05-15 MV 1.0 Erste Version 
+ * @history 2013-05-16 MV 1.1 Fangen der Exception eingefuegt
  * 
  */
 public class DisplayTree2c {
@@ -20,10 +21,15 @@ public class DisplayTree2c {
 	 * 
 	 * @param args
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args)  {
+		try {
 		GenericTreeNode<Integer> tree = MyTreeFactory.createTree();
 		TreeInfoProvider<Integer> infoProvider = new MyTreeInfoProvider<Integer>();
 		TreeDisplay.showTree(tree, infoProvider);
+		}
+		catch (IllegalArgumentException ex){
+			System.exit(1);
+		}
 
 	}
 

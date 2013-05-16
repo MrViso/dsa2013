@@ -8,8 +8,9 @@ import java.awt.Dimension;
  * @author Maximilian Visotschnig
  * @author Frank Merkle
  * @author Alessandro Tridico
- * @history 2013-05-15 MV 1.0 
  * @version 2013-05-15 MV 1.0 Erste Version
+ * @version 2013-05-16 MV 1.1 Exceptions eingefuegt
+ * @history 2013-05-16 MV 1.1 
  * 
  * @param <T>
  *            Der Datentyp der in den Knoten gespeichert wird.
@@ -50,14 +51,21 @@ public class MyTreeInfoProvider<T> implements TreeInfoProvider<T> {
 	 */
 	@Override
 	public void computeSizes(TreeSizeStorage<T> sizeStorage,
-			GenericTreeNode<T> root, int... vararg) {
+			GenericTreeNode<T> root, int... vararg) throws IllegalArgumentException {
+		
+		if (sizeStorage == null)
+			throw new IllegalArgumentException("sizeStorage ist null");
+		if (root == null)
+			throw new IllegalArgumentException("Wurzel ist null");
+
 		Dimension sizeNode = new Dimension();
 		Dimension sizeTree = new Dimension();
 		sizeNode.height = 20;
 		sizeNode.width = 30;
-		sizeTree.height = -10;
-		sizeTree.width = -10;
+		sizeTree.height = 50;
+		sizeTree.width = 250;
 		sizeStorage.setNodeSize(root, sizeNode);
+		
 		if(vararg == null)
 			sizeStorage.setSubtreeSize(root, sizeTree);
 		
