@@ -36,7 +36,7 @@ public class DummyTreeInfoProvider<T> implements TreeInfoProvider<T> {
 	 */
 	@Override
 	public void computeSizes(TreeSizeStorage<T> sizeStorage,
-			GenericTreeNode<T> root) {
+			GenericTreeNode<T> root, int... vararg) {
 	}
 
 }
