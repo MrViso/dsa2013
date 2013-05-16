@@ -91,7 +91,7 @@ public class MyTreeInfoProvider<T> implements TreeInfoProvider<T> {
 				{	//sizeTree.width = -30;
 					Dimension sizeTree_temp = new Dimension();
 					sizeTree_temp.height = sizeTree.height;
-					sizeTree_temp.width = -30;					
+					sizeTree_temp.width = -20;					
 					sizeTree_temp.width = sizeTree_temp.width * root.getChildAt(i).getChildCount();
 
 					

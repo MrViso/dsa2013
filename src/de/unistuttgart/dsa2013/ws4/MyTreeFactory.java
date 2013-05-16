@@ -34,7 +34,7 @@ public final class MyTreeFactory {
 
 		c1.getChildAt(0).addChild(9);
 		c1.getChildAt(0).addChild(10);
-		c1.getChildAt(1).addChild(14);
+		
 
 		c2.addChild(40);
 		c2.addChild(95);
