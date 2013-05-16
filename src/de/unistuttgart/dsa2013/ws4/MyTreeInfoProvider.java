@@ -1,5 +1,7 @@
 package de.unistuttgart.dsa2013.ws4;
 
+import java.awt.Dimension;
+
 /**
  * Implementation fuer optimale Ausgabe der Knoten.
  * 
@@ -49,7 +51,11 @@ public class MyTreeInfoProvider<T> implements TreeInfoProvider<T> {
 	@Override
 	public void computeSizes(TreeSizeStorage<T> sizeStorage,
 			GenericTreeNode<T> root) {
-		//TODO
+		Dimension size = new Dimension();
+		size.height = 50;
+		size.width = 50;
+		sizeStorage.setNodeSize(root, size);
+		sizeStorage.setSubtreeSize(root, size);
 	}
 
 }

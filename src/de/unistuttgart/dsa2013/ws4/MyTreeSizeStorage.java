@@ -9,6 +9,9 @@ import java.awt.Dimension;
  */
 public class MyTreeSizeStorage<T> implements TreeSizeStorage<T> {
 	
+	Dimension nodeSize = new Dimension();
+	Dimension subtreeSize = new Dimension();
+	
 	/**
 	 * Returns the size of the subtree starting at the given node.
 	 * 
@@ -17,7 +20,7 @@ public class MyTreeSizeStorage<T> implements TreeSizeStorage<T> {
 	 * @throws IllegalArgumentException if root is null.
 	 */
 	public Dimension getSubtreeSize(GenericTreeNode<T> root) {
-		//TODO
+		//TODO		
 		return null;
 	}
 	
@@ -29,7 +32,7 @@ public class MyTreeSizeStorage<T> implements TreeSizeStorage<T> {
 	 * @throws IllegalArgumentException if any of the arguments is null.
 	 */
 	public void setSubtreeSize(GenericTreeNode<T> root, Dimension size){
-		//TODO			
+		this.subtreeSize = size;
 	}
 	
 	/**
@@ -52,6 +55,6 @@ public class MyTreeSizeStorage<T> implements TreeSizeStorage<T> {
 	 * @throws IllegalArgumentException if any of the arguments is null.
 	 */
 	public void setNodeSize(GenericTreeNode<T> node, Dimension size) {
-		//TODO
+		this.nodeSize = size;
 	}
 }
