@@ -38,6 +38,8 @@ public class MyTreeInfoProvider<T> implements TreeInfoProvider<T> {
 		//TODO
 		return 25;
 	}
+	
+	public int rec_overwrite = 0;
 
 	/**
 	 * Berechnet den Abstand zwischen Knoten und Kindsknoten
@@ -51,7 +53,7 @@ public class MyTreeInfoProvider<T> implements TreeInfoProvider<T> {
 	 */
 	@Override
 	public void computeSizes(TreeSizeStorage<T> sizeStorage,
-			GenericTreeNode<T> root, int... vararg) throws IllegalArgumentException {
+			GenericTreeNode<T> root) throws IllegalArgumentException {
 		
 		if (sizeStorage == null)
 			throw new IllegalArgumentException("sizeStorage ist null");
@@ -66,11 +68,13 @@ public class MyTreeInfoProvider<T> implements TreeInfoProvider<T> {
 		sizeTree.width = 250;
 		sizeStorage.setNodeSize(root, sizeNode);
 		
-		if(vararg == null)
+		if(rec_overwrite == 0)
 			sizeStorage.setSubtreeSize(root, sizeTree);
 		
+		rec_overwrite = 1;
+		
 		for (int i = 0; i < root.getChildCount(); i++){
-			computeSizes(sizeStorage, root.getChildAt(i), 1);
+			computeSizes(sizeStorage, root.getChildAt(i));
 		}
 
 	}
