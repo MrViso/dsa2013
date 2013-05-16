@@ -28,5 +28,5 @@ public interface TreeInfoProvider<E> {
 	 * @param root The root node of the tree.
 	 * @throws IllegalArgumentException if any of the arguments is null.
 	 */
-	void computeSizes(TreeSizeStorage<E> sizeStorage, GenericTreeNode<E> root);
+	void computeSizes(TreeSizeStorage<E> sizeStorage, GenericTreeNode<E> root, int... vararg);
 }

@@ -50,7 +50,7 @@ public class MyTreeInfoProvider<T> implements TreeInfoProvider<T> {
 	 */
 	@Override
 	public void computeSizes(TreeSizeStorage<T> sizeStorage,
-			GenericTreeNode<T> root) {
+			GenericTreeNode<T> root, int... vararg) {
 		Dimension sizeNode = new Dimension();
 		Dimension sizeTree = new Dimension();
 		sizeNode.height = 20;
@@ -58,11 +58,13 @@ public class MyTreeInfoProvider<T> implements TreeInfoProvider<T> {
 		sizeTree.height = -10;
 		sizeTree.width = -10;
 		sizeStorage.setNodeSize(root, sizeNode);
-		sizeStorage.setSubtreeSize(root, sizeTree);
+		if(vararg == null)
+			sizeStorage.setSubtreeSize(root, sizeTree);
 		
 		for (int i = 0; i < root.getChildCount(); i++){
-			computeSizes(sizeStorage, root.getChildAt(i));
+			computeSizes(sizeStorage, root.getChildAt(i), 1);
 		}
+
 	}
 
 }
