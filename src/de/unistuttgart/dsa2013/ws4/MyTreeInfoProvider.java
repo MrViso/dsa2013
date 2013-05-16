@@ -55,8 +55,8 @@ public class MyTreeInfoProvider<T> implements TreeInfoProvider<T> {
 		Dimension sizeTree = new Dimension();
 		sizeNode.height = 20;
 		sizeNode.width = 30;
-		sizeTree.height = 50;
-		sizeTree.width = 250;
+		sizeTree.height = -10;
+		sizeTree.width = -10;
 		sizeStorage.setNodeSize(root, sizeNode);
 		sizeStorage.setSubtreeSize(root, sizeTree);
 		
