@@ -75,7 +75,7 @@ public class MyTreeInfoProvider<T> implements TreeInfoProvider<T> {
 		
 		for (int i = 0; i < root.getChildCount(); i++){
 			computeSizes(sizeStorage, root.getChildAt(i));
-			
+
 			if(root.getChildAt(i).getChildCount() > 0)
 			{
 				int i2 = 0;
