@@ -1,0 +1,10 @@
+Datenstrukturen und Algorithmen
+Sommersemester 2013
+Gruppe: Frank Merkle, Alessandro Tridico, Maximilian Visotschnig
+Bonusaufgabenblatt 1
+Aufgabe 1:
+d) Vorteile Iterator:
+Es wird ein Wert nach und nach direkt Zeiger für Zeiger durchgegangen und ausgegeben, weshalb keine unnötigen Traversierungen  auftreten, welche auftreten können, wenn man jedes Mal speziell den Index eines ArrayListen Werts nutzt und aufruft. Dementsprechend ist es mit einem Iterator am praktischsten eine ganze Liste auszugeben.
+
+Vorteile Zählvariable:
+Man kann auch nur Teilsequenzen einer Liste ausgeben bzw. leichter auswählen Welchen Listenbereich man haben möchte oder ob man vielleicht auch regelmäßig Elemente überspringt. Dementsprechend ist es leichter gezielt bestimmte Werte auszugeben.

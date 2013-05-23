@@ -1,7 +1,7 @@
 package de.unistuttgart.dsa2013.bws1;
 
 /**
- * Aufgabe 2 des Bonusarbeitsblatts Zwei Funktionen welche zum einen eine
+ * Aufgabe 3 des Bonusarbeitsblatts Zwei Funktionen welche zum einen eine
  * 2D-Arraymatrix aufbauen und einzelne Werte nach Wunsch setzen können.
  * 
  * @author Maximilian Visotschnig
@@ -13,7 +13,7 @@ package de.unistuttgart.dsa2013.bws1;
  * @history 2013-05-23 MV 1.2 fillArray neu implementiert, nach missverstaendnis
  * 
  */
-public class Aufgabe2 {
+public class Aufgabe3 {
 
 	/**
 	 * Fuellt ein Array mit Wert value
