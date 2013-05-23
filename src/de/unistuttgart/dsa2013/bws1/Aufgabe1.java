@@ -18,8 +18,8 @@ public class Aufgabe1 {
 	/**
 	 * Urspruengliche Vorgabe in einer Methode umgesetzt.
 	 * 
-	 * ArrayList <String> items = new ArrayList <String>();
-	 * wurde zum Besseren Testen zum Kommentar gemacht und in die main gezogen.
+	 * ArrayList <String> items = new ArrayList <String>(); wurde zum Besseren
+	 * Testen zum Kommentar gemacht und in die main gezogen.
 	 * 
 	 * 
 	 * @param eingang
@@ -34,11 +34,11 @@ public class Aufgabe1 {
 	}
 
 	/**
-	 * Aufgabe 1a: Implementierung einer While Schleife mit Index i, welcher alle
-	 * Elemente des Arrays durchgeht und weitergibt.
+	 * Aufgabe 1a: Implementierung einer While Schleife mit Index i, welcher
+	 * alle Elemente des Arrays durchgeht und weitergibt.
 	 * 
-	 * ArrayList <String> items = new ArrayList <String>();
-	 * wurde zum Besseren Testen zum Kommentar gemacht und in die main gezogen.
+	 * ArrayList <String> items = new ArrayList <String>(); wurde zum Besseren
+	 * Testen zum Kommentar gemacht und in die main gezogen.
 	 * 
 	 * @param eingang
 	 *            einlesen eines String Arrays
@@ -57,10 +57,10 @@ public class Aufgabe1 {
 	/**
 	 * Aufgabe 1b: Implementierung einer whileSchleife, welche mit Hilfe eines
 	 * Iterators alle ArrayList Elemente durchgeht und an processValue
-	 * uebergibt. 
+	 * uebergibt.
 	 * 
-	 * ArrayList <String> items = new ArrayList <String>();
-	 * wurde zum Besseren Testen zum Kommentar gemacht und in die main gezogen.
+	 * ArrayList <String> items = new ArrayList <String>(); wurde zum Besseren
+	 * Testen zum Kommentar gemacht und in die main gezogen.
 	 * 
 	 * @param eingang
 	 *            einlesen eines String Arrays
@@ -78,10 +78,10 @@ public class Aufgabe1 {
 	/**
 	 * Aufgabe 1c: Implementierung einer For-Schleife welche mit Hilfe eines
 	 * Iterators den naechsten Wert ausliest und daraufhin in eine Variable
-	 * speichert 
+	 * speichert
 	 * 
-	 * ArrayList <String> items = new ArrayList <String>(); wurde zum
-	 * Besseren Testen zum Kommentar gemacht und in die main gezogen.
+	 * ArrayList <String> items = new ArrayList <String>(); wurde zum Besseren
+	 * Testen zum Kommentar gemacht und in die main gezogen.
 	 * 
 	 * @param eingang
 	 *            einlesen eines String Arrays
@@ -108,7 +108,6 @@ public class Aufgabe1 {
 		System.out.println(item);
 	}
 
-	
 	/**
 	 * Main Methode, welche alle Methoden der Klasse testet.
 	 * 
