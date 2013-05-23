@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 
-public class main {
+public class aufgabe1 {
 
 	/**
 	 * 
@@ -63,7 +63,6 @@ public class main {
 	}
 
 	private static void processValue(String item) {
-		// TODO Auto-generated method stub
 		System.out.println(item);
 	}
 
