@@ -13,7 +13,7 @@ import java.util.Iterator;
  * @history 2013-05-23 MV 1.0 Implementierung der Schleifen
  * 
  */
-public class aufgabe1 {
+public class Aufgabe1 {
 
 	/**
 	 * Urspruengliche Vorgabe in einer Methode umgesetzt.
