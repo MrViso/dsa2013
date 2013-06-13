@@ -69,9 +69,11 @@ public class ArrayTreeNode<T> implements GenericTreeNode<T> {
 		} else if (z == 1) {
 			z = (this.serialIndex / 2);
 		}
-		// Welche Funktion gibt es sonst um Elemente von serialStorage auszugeben?
-		// LEider nur serialStorage.getElement(z) wahrgenommen.
-		return serialStorage.getElement(z);
+		// Welche Funktion gibt es sonst um Elemente von serialStorage
+		// auszugeben?
+		// Leider nur serialStorage.getElement(z) wahrgenommen.
+		return null;
+		//return serialStorage.getElement(z);
 	}
 
 	/**
@@ -87,11 +89,13 @@ public class ArrayTreeNode<T> implements GenericTreeNode<T> {
 		if (index > getMaxChildCount())
 			throw new IndexOutOfBoundsException(
 					"Index ist ausserhalb der Reichweite der Kinderknoten");
-		int z = 2 * serialIndex + index;
-
-		// Welche Funktion gibt es sonst um Elemente von serialStorage auszugeben?
-		// LEider nur serialStorage.getElement(z) wahrgenommen.
-		return serialStorage.getElement(z);
+		//int z = 2 * serialIndex + index;
+		
+		// Welche Funktion gibt es sonst um Elemente von serialStorage
+		// auszugeben?
+		// Lider nur serialStorage.getElement(z) wahrgenommen.
+		return null;
+		//return serialStorage.getElement(z);
 	}
 
 	/**
