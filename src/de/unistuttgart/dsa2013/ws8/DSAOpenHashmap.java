@@ -3,7 +3,8 @@ package de.unistuttgart.dsa2013.ws8;
 import java.util.Iterator;
 
 /**
- * Implementation des NodeExpanders
+ * Implementation der Open Hashmap orientiert an den Vorlesungsfolien
+ * V14_Hashing.pdf der aktuellen DSA Vorlesung.
  * 
  * @author Maximilian Visotschnig
  * @author Frank Merkle
@@ -12,7 +13,7 @@ import java.util.Iterator;
  * @history 2013-06-20 MV 1.0 Erste Version
  * 
  * @param <K>
- *            Schlüssel Typ
+ *            Schluessel Typ
  * @param <V>
  *            Werte Typ
  * 
@@ -31,7 +32,7 @@ public class DSAOpenHashmap<K, V> implements DSAMapD<K, V> {
 	 * @throws IllegalArgumentException
 	 *             if c<1
 	 */
-	public DSAOpenHashmap(int size, int c) throws IllegalArgumentException{
+	public DSAOpenHashmap(int size, int c) throws IllegalArgumentException {
 		if (c < 1)
 			throw new IllegalArgumentException("c muss mindestens 1 groß sein");
 		table = new KeyValuePair[size];
@@ -49,8 +50,7 @@ public class DSAOpenHashmap<K, V> implements DSAMapD<K, V> {
 	@Override
 	public Iterator<de.unistuttgart.dsa2013.ws8.DSAMapA.KeyValuePair<K, V>> iterator() {
 		// TODO Auto-generated method stub
-		return new Iterator<de.unistuttgart.dsa2013.ws8.DSAMapA.KeyValuePair<K, V>>(
-				table);
+		return new Iterator<de.unistuttgart.dsa2013.ws8.DSAMapA.KeyValuePair<K, V>>(table);
 	}
 
 	/**
@@ -58,7 +58,7 @@ public class DSAOpenHashmap<K, V> implements DSAMapD<K, V> {
 	 * enthalten ist.
 	 * 
 	 * @param key
-	 *            Der Schlüssel des Eintrags
+	 *            Der Schluessel des Eintrags
 	 * @param value
 	 *            der Wert des Eintrags
 	 * @throws IllegalArgumentException
@@ -93,7 +93,7 @@ public class DSAOpenHashmap<K, V> implements DSAMapD<K, V> {
 	 * 
 	 * @param key
 	 *            der in Index gewandelt werden muss
-	 * @return int gesuchter Index für die Hashmap
+	 * @return int gesuchter Index fuer die Hashmap
 	 * 
 	 * @throw IllegalArgumentException wenn key null ist
 	 */
@@ -104,7 +104,7 @@ public class DSAOpenHashmap<K, V> implements DSAMapD<K, V> {
 	}
 
 	/**
-	 * Prüft ob Key vorhanden ist
+	 * Prueft ob Key vorhanden ist
 	 * 
 	 * @param key
 	 *            nach dem gesucht werden soll
@@ -116,7 +116,7 @@ public class DSAOpenHashmap<K, V> implements DSAMapD<K, V> {
 	public boolean containsKey(K key) throws IllegalArgumentException {
 		if (key == null)
 			throw new IllegalArgumentException(
-					"Schlüssel ist bei boolean containsKey null");
+					"Schluessel ist bei boolean containsKey null");
 
 		Iterator<de.unistuttgart.dsa2013.ws8.DSAMapA.KeyValuePair<K, V>> it = this
 				.iterator();
@@ -133,7 +133,7 @@ public class DSAOpenHashmap<K, V> implements DSAMapD<K, V> {
 	 * Gibt einen Wert aus, der nach seinem Key gesucht wird
 	 * 
 	 * @param key
-	 *            der Schlüssel des gesuchten Werts
+	 *            der Schluessel des gesuchten Werts
 	 * @return der gesuchte Wert
 	 * @throws IllegalArgumentException
 	 *             wenn key null ist
@@ -142,7 +142,7 @@ public class DSAOpenHashmap<K, V> implements DSAMapD<K, V> {
 	@Override
 	public V get(K key) throws IllegalArgumentException {
 		if (key == null)
-			throw new IllegalArgumentException("Schlüssel ist bei V get null");
+			throw new IllegalArgumentException("Schluessel ist bei V get null");
 		int index = getIndex(key);
 		if (table[index] != null) {
 			for (KeyValuePair<K, V> entry : this) {
@@ -155,10 +155,10 @@ public class DSAOpenHashmap<K, V> implements DSAMapD<K, V> {
 	}
 
 	/**
-	 * Entfernt einen Eintrag ausgehend von seinem Schlüssel
+	 * Entfernt einen Eintrag ausgehend von seinem Schluessel
 	 * 
 	 * @param key
-	 *            Der Schlüssel der auf den zu entfernenden Wert zeigt
+	 *            Der Schluessel der auf den zu entfernenden Wert zeigt
 	 * @return Den Wert der entfernt werden soll
 	 * @throws IllegalArgumentException
 	 *             Wenn key null ist
@@ -168,7 +168,7 @@ public class DSAOpenHashmap<K, V> implements DSAMapD<K, V> {
 	public V remove(K key) throws IllegalArgumentException {
 		if (key == null)
 			throw new IllegalArgumentException(
-					"Schlüssel ist bei V remove null");
+					"Schluessel ist bei V remove null");
 		int index = getIndex(key);
 		if (table[index] != null) {
 			Iterator<de.unistuttgart.dsa2013.ws8.DSAMapA.KeyValuePair<K, V>> it = this
@@ -187,7 +187,7 @@ public class DSAOpenHashmap<K, V> implements DSAMapD<K, V> {
 	}
 
 	/**
-	 * Gibt den Table zurück
+	 * Gibt den Table zurueck
 	 * 
 	 * @return Der auszugebende Table
 	 */
