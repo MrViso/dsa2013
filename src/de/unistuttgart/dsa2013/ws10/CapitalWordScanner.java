@@ -19,7 +19,7 @@ import java.util.regex.Pattern;
  */
 public class CapitalWordScanner implements LineScanner {
 
-	private static final Pattern p = Pattern.compile("\\p{Upper}");
+	private static final Pattern p = Pattern.compile("\\p{Upper}.*");
 
 	/**
 	 * Iterates over line and matches with the pattern, if the first letter is

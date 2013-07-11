@@ -20,9 +20,8 @@ import java.util.regex.Pattern;
 public class AfterTTScanner implements LineScanner {
 
 	//TODO
-	private static final Pattern p = Pattern.compile("\\t");
-	private static final Pattern p2 = Pattern.compile("\\tt*");
-	
+	private static final Pattern p = Pattern.compile("\\.*t+");
+
 	
 	/**
 	 * Iterates over line and matches with the pattern, if the last letters are
