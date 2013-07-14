@@ -99,11 +99,14 @@ public class Table {
 	 */
 	private int remainingStudents;
 	
+	
+	
 	/**
 	 * Stores that a student has finished his or her work.
 	 */
 	public synchronized void notifyStudentDone() {
 		remainingStudents--;
+		System.out.println(remainingStudents);
 		
 		if (remainingStudents <= 0) {
 			Collections.sort(log);
