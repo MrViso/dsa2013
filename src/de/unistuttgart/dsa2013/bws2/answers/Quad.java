@@ -18,7 +18,8 @@ import de.unistuttgart.dsa2013.bws2.TownImporter;
  * @author Maximilian Visotschnig
  * @author Frank Merkle
  * @author Alessandro Tridico
- * @version 2013-07-17 MV 1.1
+ * @version 2013-07-17 MV 1.2
+ * @history 2013-07-17 MV 1.2 Verbesserung von getChildren()
  * @history 2013-07-17 MV 1.1 Implementierung QuadNodeB und restliche Methoden
  * @history 2013-07-14 MV 1.0 Implementierung QuadNodeA
  * 
@@ -51,6 +52,7 @@ public class Quad implements QuadNodeB, QuadNodeA {
 	 */
 	public Quad(double x, double y, double width, double height,
 			int maxTownCount) {
+		this.children = new Quad[4];
 		this.x = x;
 		this.y = y;
 		this.width = width;
@@ -136,7 +138,7 @@ public class Quad implements QuadNodeB, QuadNodeA {
 			if (countTowns() > maxTownCount)
 				partition();
 		} else {
-			for (Quad child : getChildren()) {
+			for (QuadNodeB child : getChildren()) {
 				if (child.contains(town.getLongitude(), town.getLatitude())) {
 					child.add(town);
 					break;
@@ -165,8 +167,20 @@ public class Quad implements QuadNodeB, QuadNodeA {
 	 */
 	@Override
 	public Iterable<QuadNodeB> getChildren() {
-		Iterable<QuadNodeB> liste = Arrays.asList(this.children);
-		return liste;
+
+		/**
+		 * Umwandeln in ArrayList da Interface Return mit <Quad> nicht moeglich
+		 * war
+		 */
+		List<QuadNodeB> tmp = new ArrayList();
+		for (int i = 0; i < this.children.length; i++) {
+			tmp.add(this.children[i]);
+		}
+		return tmp;
+
+		// Urspruenglicher Ansatz
+		//Iterable<Quad> liste = Arrays.asList(this.children);
+		//return liste;
 	}
 
 	/**
